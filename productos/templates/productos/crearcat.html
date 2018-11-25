@@ -1,0 +1,33 @@
+{% extends 'productos/layout.html' %}
+
+{% block content %}
+<h1 class="center-align red lighten-3">Crear categoría</h1><br>
+
+<div >
+    <div class="card-content">
+        <h2>Ingresa los datos de la categoría</h2>
+    </div>
+    <div class="card-action">
+        <form action="" method="POST"> {% csrf_token %}
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><h5>Categoria</h5></label>
+                    <div class="col-sm-10">
+                        <input type="text" placeholder="Nombre de la categoría" name="name" required style="width: 38%">
+                    </div>
+
+                <label class="col-sm-2 col-form-label"><h5>Descripción</h5></label>
+                    <div class="col-sm-10">
+                        <input type="text" required name="desc" placeholder="Descripción" style="width: 38%">
+                    </div>
+
+                    <div class="col-sm-10"><br>
+                        <center><button class="btn btn-outline-info" type="submit"><h4>Guardar</h4></button></center>
+                    </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<a href="/categorias/" class="btn" style="color: white"><h5>Atrás</h5></a><br>
+
+{% endblock %}
